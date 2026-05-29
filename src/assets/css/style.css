@@ -18,8 +18,8 @@
   --fundo-principal :#222222;
   --texto: #e0e0e0;
   --texto-inverso: #333333;
-  --destaque: rgb(255, 0, 0); /* ff5522 */
-  --destaque-inverso: #a73917; /* a73917 */
+  --destaque: #66bbff; /* ff5522 */
+  --destaque-inverso: #0077ff; /* a73917 */
   --fundo-card: #444444 ;
 }
 
