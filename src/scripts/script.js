@@ -63,9 +63,10 @@ function criaProjetoHTML(repo){
   ? "/portfolio/"
   : "/";
   const imagem = `${basePath}src/assets/img/${repo.name}.jpg`;
+  const fallback = `${basePath}src/assets/img/default.jpg`;
   return `
     <div class="projeto">
-      <img src="${imagem}" class="foto" alt="Projeto ${repo.name}" onerror="this.onerror=null; this.src='./src/assets/img/default.jpg'">
+      <img src="${imagem}" class="foto" alt="Projeto ${repo.name}" onerror="this.onerror=null; this.src=''${fallback}'">
 
       <div class="projeto-info">
         <h2 class="titulo">${repo.name}</h2>
