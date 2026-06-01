@@ -59,8 +59,8 @@ async function executarAPI() {
 }
 
 function criaProjetoHTML(repo){
-  const basePath = window.location.pathname.includes("Portf-lio")
-  ? "/Portf-lio/"
+  const basePath = window.location.pathname.includes("portfolio")
+  ? "/portfolio/"
   : "/";
   const imagem = `${basePath}src/assets/img/${repo.name}.jpg`;
   return `
