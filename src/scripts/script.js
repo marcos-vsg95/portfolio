@@ -63,11 +63,10 @@ function criaProjetoHTML(repo){
 
   return `
     <div class="projeto">
-      <img src="${imagem}" class="foto" alt="Projeto ${repo.name}" onerror="this.onerror=null; this.src='${fallback}'">
+      <img src="${imagem}" class="foto" alt="Projeto ${repo.name}">
 
       <div class="projeto-info">
         <h2 class="titulo">${repo.name}</h2>
-
         <p>${repo.description || "Sem descrição disponível."}</p>
 
         <details class="descricao">
