@@ -59,11 +59,8 @@ async function executarAPI() {
 }
 
 function criaProjetoHTML(repo){
-  const basePath = window.location.pathname.includes("portfolio")
-  ? "/portfolio/"
-  : "/";
-  const imagem = `${basePath}src/assets/img/${repo.name}.jpg`;
-  const fallback = `${basePath}src/assets/img/default.jpg`;
+  const imagem = `https://opengraph.githubassets.com/1/marcos-vsg95/${repo.name}`;
+
   return `
     <div class="projeto">
       <img src="${imagem}" class="foto" alt="Projeto ${repo.name}" onerror="this.onerror=null; this.src='${fallback}'">
