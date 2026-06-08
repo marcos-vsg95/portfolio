@@ -58,22 +58,25 @@ async function executarAPI() {
     divProjetos.innerHTML = html;
 }
 
-function criaProjetoHTML(repo){
-  const imagem = `https://opengraph.githubassets.com/1/marcos-vsg95/${repo.name}`;
+function criaProjetoHTML(repo) {
+  const imagemLocal = `/portfolio/src/assets/img/${repo.name}.jpg`;
+  const imagemFallback = `https://opengraph.githubassets.com/1/marcos-vsg95/${repo.name}`;
 
   return `
     <div class="projeto">
-      <img src="${imagem}" class="foto" alt="Projeto ${repo.name}">
-
+      <img 
+        src="${imagemLocal}" 
+        class="foto" 
+        alt="Projeto ${repo.name}"
+        onerror="this.onerror=null; this.src='${imagemFallback}'"
+      >
       <div class="projeto-info">
         <h2 class="titulo">${repo.name}</h2>
         <p>${repo.description || "Sem descrição disponível."}</p>
-
         <details class="descricao">
           <summary>Saiba mais...</summary>
           <p>Linguagem principal: ${repo.language || "Não especificada"}</p>
         </details>
-
         <a href="${repo.homepage || repo.html_url}" target="_blank">
           🔗 Ver projeto
         </a>
